@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAB // VISUAL 50 — Galería Interactiva CSS & JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Efectos globales de cursor -->
+  <div class="cursor-orb" id="orb"></div>
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="flashlight-overlay" id="flashlightOverlay"></div>
+
+  <header>
+    <div class="badge">50 EXPERIMENTOS EN VIVO</div>
+    <h1 class="glitch-title" data-text="LAB // VISUAL">LAB // VISUAL</h1>
+    <p>Colección completa de arte CSS puro, partículas, geometría, tipografía e interfaces futuristas</p>
+    <div class="controls-bar">
+      <button id="toggleFlashlight" class="hud-btn">🔦 Modo Linterna: OFF</button>
+      <button id="toggleParticles" class="hud-btn active">✨ Estela Cursor: ON</button>
+    </div>
+  </header>
+
+  <!-- SECCIÓN 1: CURSOR Y PARTÍCULAS (1-10) -->
+  <section class="category-section">
+    <h2 class="cat-title">01 — Cursor, Partículas y Física (1–10)</h2>
+    <div class="gallery">
+      <article class="card tilt-card">
+        <div class="art-box" id="exp1"><span class="hint">Mueve el ratón por la web</span></div>
+        <div class="card-info"><h3>01. Estela de Partículas</h3><p>Partículas neón generadas dinámicamente siguiendo el puntero.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box magnifier-box" id="exp2">
+          <div class="mag-text">ZOOM CSS PURO • DETALLE OCULTO 400%</div>
+          <div class="mag-lens" id="magLens">ZOOM CSS PURO • DETALLE OCULTO 400%</div>
+        </div>
+        <div class="card-info"><h3>02. Efecto Lupa</h3><p>Lente interactiva que amplía la capa inferior en tiempo real.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box ripple-box" id="exp3"><span class="hint">Haz clic aquí</span></div>
+        <div class="card-info"><h3>03. Onda Expansiva (Ripple)</h3><p>Ondas concéntricas generadas en el punto exacto de cada clic.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box" id="exp4"><span class="hint">Usa el botón superior "Modo Linterna"</span></div>
+        <div class="card-info"><h3>04. Linterna de Oscuridad</h3><p>Máscara radial dinámica que ilumina solo alrededor del cursor.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box gravity-box" id="exp5"></div>
+        <div class="card-info"><h3>05. Gravedad Repulsiva</h3><p>Nodos magnéticos que huyen al acercar el puntero.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box" id="exp6"><div class="neon-ring-demo"></div></div>
+        <div class="card-info"><h3>06. Cursor Neón Flotante</h3><p>Anillo personalizado con retardo suave sobre el cursor nativo.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box motion-blur-box" id="exp7"><div class="blur-ball"></div></div>
+        <div class="card-info"><h3>07. Estela Motion Blur</h3><p>Simulación de velocidad con sombras desfasadas en movimiento.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box fluid-box" id="exp8"></div>
+        <div class="card-info"><h3>08. Pintura Fluida</h3><p>Mueve el ratón para pintar trazos luminosos que se disuelven.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box starfield-box" id="exp9"></div>
+        <div class="card-info"><h3>09. Polvo Estelar 3D</h3><p>Campo de estrellas con profundidad y paralaje al mover el cursor.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box elastic-box"><div class="elastic-jelly" id="exp10">TIRA DE MÍ</div></div>
+        <div class="card-info"><h3>10. Arrastre Elástico</h3><p>Caja con física de resorte que rebota al soltarla.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: GEOMETRÍA Y MATEMÁTICAS (11-20) -->
+  <section class="category-section">
+    <h2 class="cat-title">02 — Geometría y Matemáticas (11–20)</h2>
+    <div class="gallery">
+      <article class="card tilt-card">
+        <div class="art-box"><canvas id="canvas11" width="280" height="200"></canvas></div>
+        <div class="card-info"><h3>11. Curvas de Lissajous</h3><p>Armónicos paramétricos dibujados en tiempo real.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box fractal-box">
+          <canvas id="canvas12" width="240" height="170"></canvas>
+          <input type="range" id="sierpinskiDepth" min="1" max="6" value="4" class="mini-slider">
+        </div>
+        <div class="card-info"><h3>12. Triángulo de Sierpinski</h3><p>Fractal recursivo ajustable mediante control deslizante.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><canvas id="canvas13" width="280" height="200"></canvas></div>
+        <div class="card-info"><h3>13. Ondas Senoidales</h3><p>Superposición de frecuencias cuánticas animadas.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box sacred-geo" id="exp14"></div>
+        <div class="card-info"><h3>14. Geometría Sagrada CSS</h3><p>Anillos concéntricos rotando en proporciones áureas.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box cube-scene">
+          <div class="cube3d" id="cube3d">
+            <div class="face front">FRONT</div><div class="face back">BACK</div>
+            <div class="face right">RIGHT</div><div class="face left">LEFT</div>
+            <div class="face top">TOP</div><div class="face bottom">BOTTOM</div>
+          </div>
+        </div>
+        <div class="card-info"><h3>15. Cubo 3D Interactivo</h3><p>Arrastra el cubo para rotarlo en los ejes X e Y.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><canvas id="canvas16" width="280" height="200"></canvas></div>
+        <div class="card-info"><h3>16. Esfera de Nodos 3D</h3><p>Proyección tridimensional de puntos en rotación continua.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box kaleidoscope"><div class="k-layer k1"></div><div class="k-layer k2"></div></div>
+        <div class="card-info"><h3>17. Caleidoscopio Dinámico</h3><p>Simetría radial con gradientes cónicos en rotación inversa.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><canvas id="canvas18" width="260" height="190"></canvas></div>
+        <div class="card-info"><h3>18. Laberinto Procedural</h3><p>Patrón de Truchet generado aleatoriamente al hacer clic.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box tessellation" id="exp19"></div>
+        <div class="card-info"><h3>19. Teselación Hexagonal</h3><p>Panal geométrico reactivo al paso del ratón.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><canvas id="canvas20" width="280" height="200"></canvas></div>
+        <div class="card-info"><h3>20. Matriz Binaria Pastel</h3><p>Lluvia de código estilo Matrix con paleta neón suave.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: TIPOGRAFÍA CREATIVA (21-30) -->
+  <section class="category-section">
+    <h2 class="cat-title">03 — Tipografía Creativa y Texto (21–30)</h2>
+    <div class="gallery">
+      <article class="card tilt-card">
+        <div class="art-box"><div class="warp-text" id="exp21">INTERACTIVO</div></div>
+        <div class="card-info"><h3>21. Texto Deformado</h3><p>Cada letra escala y reacciona según la cercanía del puntero.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><div class="holo-text">HOLOGRAMA</div></div>
+        <div class="card-info"><h3>22. Texto Holográfico</h3><p>Líneas de escaneo y aberración cromática cyberpunk.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box">
+          <div class="liquid-text-wrap"><span class="lt-back">LIQUID</span><span class="lt-front">LIQUID</span></div>
+        </div>
+        <div class="card-info"><h3>23. Tipografía Líquida</h3><p>Relleno ondulante animado mediante clip-path.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><div class="extrude-text">3D DEPTH</div></div>
+        <div class="card-info"><h3>24. Texto 3D Extruido</h3><p>Profundidad volumétrica construida con múltiples sombras.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box mask-reveal-box" id="exp25"><div class="mask-text">REVELAR</div></div>
+        <div class="card-info"><h3>25. Revelación por Máscara</h3><p>El fondo cósmico se ilumina dentro del contorno tipográfico.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><div class="glitch-box" data-text="SYSTEM_ERR">SYSTEM_ERR</div></div>
+        <div class="card-info"><h3>26. Glitch Avanzado</h3><p>Recortes aleatorios en canales rojo y cian.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box">
+          <svg viewBox="0 0 200 200" class="circle-svg">
+            <defs><path id="circlePath" d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/></defs>
+            <text fill="#00f5d4" font-size="13" letter-spacing="3.2">
+              <textPath href="#circlePath">ARTE GENERATIVO • CÓDIGO CREATIVO • CSS •</textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="card-info"><h3>27. Texto Circular Infinito</h3><p>Tipografía curvada sobre trazado SVG en rotación continua.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box">
+          <svg viewBox="0 0 260 80" class="handwriting-svg">
+            <text x="20" y="55" class="stroke-text">Creative</text>
+          </svg>
+        </div>
+        <div class="card-info"><h3>28. Trazo Manuscrito</h3><p>Animación de dibujo vectorial con stroke-dashoffset.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><div class="flow-gradient-text">SPECTRUM</div></div>
+        <div class="card-info"><h3>29. Gradiente Fluido</h3><p>Espectro cromático continuo desplazándose por el texto.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box shadow-text-box" id="exp30"><div class="dyn-shadow-text" id="dynShadowText">LUZ</div></div>
+        <div class="card-info"><h3>30. Sombra Dinámica</h3><p>La sombra proyectada huye del cursor como una fuente de luz.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: ARTE GENERATIVO Y PAISAJES CSS (31-40) -->
+  <section class="category-section">
+    <h2 class="cat-title">04 — Arte Generativo y Paisajes CSS (31–40)</h2>
+    <div class="gallery">
+      <article class="card tilt-card">
+        <div class="art-box synthwave">
+          <div class="sun"></div><div class="mountain m-left"></div><div class="mountain m-right"></div><div class="grid-floor animated-grid"></div>
+        </div>
+        <div class="card-info"><h3>31. Horizonte Synthwave</h3><p>Sol retro y cuadrícula infinita animada en CSS puro.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box moon-box">
+          <div class="moon"><div class="moon-shadow" id="moonShadow"></div></div>
+          <input type="range" id="moonSlider" min="-100" max="100" value="35" class="mini-slider">
+        </div>
+        <div class="card-info"><h3>32. Fase Lunar Interactiva</h3><p>Controla el ciclo lunar mediante sombras internas.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box neon-rain" id="exp33"></div>
+        <div class="card-info"><h3>33. Lluvia de Neón</h3><p>Gotas luminosas cayendo a distintas velocidades.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box aurora-box"><div class="aurora a1"></div><div class="aurora a2"></div></div>
+        <div class="card-info"><h3>34. Aurora Boreal</h3><p>Cortinas de luz polar con filtros blur y mezcla aditiva.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box eclipse-box"><div class="corona"></div><div class="eclipse-moon"></div></div>
+        <div class="card-info"><h3>35. Eclipse Solar</h3><p>Corona brillante y tránsito orbital animado.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box fire-box"><div class="flame f1"></div><div class="flame f2"></div><div class="flame f3"></div></div>
+        <div class="card-info"><h3>36. Fuego Minimalista</h3><p>Llamas ascendentes construidas con formas orgánicas CSS.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box iso-world">
+          <div class="iso-grid">
+            <div class="iso-block b1"></div><div class="iso-block b2"></div>
+            <div class="iso-block b3"></div><div class="iso-block b4"></div>
+          </div>
+        </div>
+        <div class="card-info"><h3>37. Mundo Isométrico</h3><p>Bloques arquitectónicos en perspectiva isométrica 3D.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box low-poly-sea">
+          <div class="poly-wave w1"></div><div class="poly-wave w2"></div><div class="poly-wave w3"></div>
+        </div>
+        <div class="card-info"><h3>38. Océano Low-Poly</h3><p>Faceta geométrica de olas superpuestas con clip-path.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box storm-box">
+          <div class="lightning"></div>
+          <div class="skyline"></div>
+        </div>
+        <div class="card-info"><h3>39. Tormenta Eléctrica</h3><p>Destellos de relámpago sobre silueta urbana nocturna.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box nebula-box"><div class="nebula-cloud"></div><div class="nebula-core"></div></div>
+        <div class="card-info"><h3>40. Nebulosa Espacial</h3><p>Nubes cósmicas rotatorias en tonos violeta y cian.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: INTERFACES Y COMPONENTES FUTURISTAS (41-50) -->
+  <section class="category-section">
+    <h2 class="cat-title">05 — Interfaces y Componentes Futuristas (41–50)</h2>
+    <div class="gallery">
+      <article class="card tilt-card">
+        <div class="art-box glass2-box"><div class="glass2-pane">GLASS 2.0</div></div>
+        <div class="card-info"><h3>41. Glassmorphism 2.0</h3><p>Refracción especular con doble borde iluminado.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box">
+          <label class="cyber-switch"><input type="checkbox" checked><span class="cyber-slider"></span></label>
+        </div>
+        <div class="card-info"><h3>42. Toggle Ultrasensible</h3><p>Interruptor táctil con transición elástica y brillo neón.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><div class="liquid-loader"><div class="liquid-fill"></div></div></div>
+        <div class="card-info"><h3>43. Carga Orgánica</h3><p>Barra de progreso líquida con ola interna continua.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box radial-box">
+          <button class="radial-trigger" id="radialBtn">+</button>
+          <div class="radial-item ri1">★</div><div class="radial-item ri2">⚡</div>
+          <div class="radial-item ri3">◈</div><div class="radial-item ri4">⌘</div>
+        </div>
+        <div class="card-info"><h3>44. Menú Radial</h3><p>Pulsa el botón central para desplegar acciones en órbita.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box odometer-box">
+          <div class="odo-display" id="odoDisplay">0482</div>
+          <button class="hud-btn small" id="odoBtn">+125</button>
+        </div>
+        <div class="card-info"><h3>45. Contador Rodante</h3><p>Incremento numérico animado estilo odómetro digital.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><div class="tilt-badge">3D TILT ACTIVO EN TODAS LAS CARDS</div></div>
+        <div class="card-info"><h3>46. Perspectiva 3D Tilt</h3><p>Todas las tarjetas de esta galería reaccionan a tu cursor.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box"><div class="scifi-hud">SYS.ONLINE // 99.8%</div></div>
+        <div class="card-info"><h3>47. Panel Sci-Fi HUD</h3><p>Esquinas biseladas con clip-path y línea de escaneo.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box">
+          <div class="mag-tooltip-wrap" id="exp48">
+            <button class="hud-btn">Pasa el ratón</button>
+            <span class="mag-tip" id="magTip">INFO MAGNÉTICA</span>
+          </div>
+        </div>
+        <div class="card-info"><h3>48. Tooltip Magnético</h3><p>Etiqueta flotante que sigue el desplazamiento sobre el botón.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box bars-box" id="exp49">
+          <div class="stat-bar" style="--h:85%"></div><div class="stat-bar" style="--h:55%"></div>
+          <div class="stat-bar" style="--h:95%"></div><div class="stat-bar" style="--h:70%"></div>
+        </div>
+        <div class="card-info"><h3>49. Gráficos Elásticos</h3><p>Barras estadísticas con rebote al pasar el cursor.</p></div>
+      </article>
+      <article class="card tilt-card">
+        <div class="art-box eq-box" id="exp50"></div>
+        <div class="card-info"><h3>50. Visualizador de Audio</h3><p>Ecualizador reactivo de 16 bandas en tiempo real.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <p>LAB // VISUAL 50 • Listo para GitHub Pages • HTML5 + CSS3 + Vanilla JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
