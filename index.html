@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Visual | Arte CSS & Código Creativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Orbe que sigue al ratón -->
+  <div class="cursor-orb" id="orb"></div>
+
+  <header>
+    <h1>LAB // VISUAL</h1>
+    <p>Experimentos de CSS puro e interactividad</p>
+  </header>
+
+  <main class="gallery">
+    <!-- Experimento 1: Paisaje Synthwave en CSS Puro -->
+    <section class="card">
+      <div class="art-box synthwave">
+        <div class="sun"></div>
+        <div class="mountain m-left"></div>
+        <div class="mountain m-right"></div>
+        <div class="grid-floor"></div>
+      </div>
+      <div class="card-info">
+        <h2>01. Horizonte Synthwave</h2>
+        <p>Ilustración generada 100% con degradados y clip-path en CSS. Sin imágenes.</p>
+      </div>
+    </section>
+
+    <!-- Experimento 2: Matriz Cinética Interactiva -->
+    <section class="card">
+      <div class="art-box kinetic-grid" id="kineticGrid">
+        <!-- Los cuadros se generan con JavaScript -->
+      </div>
+      <div class="card-info">
+        <h2>02. Matriz Reactiva</h2>
+        <p>Pasa el ratón por encima de los nodos para alterar su estado y color.</p>
+      </div>
+    </section>
+
+    <!-- Experimento 3: Esfera de Cristal Líquido -->
+    <section class="card">
+      <div class="art-box liquid-container">
+        <div class="blob"></div>
+      </div>
+      <div class="card-info">
+        <h2>03. Morfología Orgánica</h2>
+        <p>Animación fluida de radios de borde (`border-radius`) con efecto neón.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Alojado en GitHub Pages • Código abierto</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
